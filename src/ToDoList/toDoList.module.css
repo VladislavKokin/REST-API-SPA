@@ -1,0 +1,246 @@
+*,
+:after,
+:before,
+::backdrop {
+    box-sizing: border-box;
+    border: 0 solid;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    min-height:100vh;
+    min-width: 1440px;
+    background-image: url(/background.svg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blockList {
+    min-width: 750px;
+    background: #FFFFFF;
+    border-radius: 35px;
+    padding: 42px;
+    margin: 50px 0px;
+}
+
+.title {
+    font-family: "Great Vibes", cursive;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 60px;
+    color: #313039;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 42px;
+}
+
+.containerInput {
+    display: grid;
+    grid-template-columns: 1fr 52px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.input {
+    font-family: "Great Vibes", cursive;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 60px;
+    height: 56px;
+    border: 1px solid #CBCAD7;
+    border-radius: 35px;
+    padding: 5px 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    background: rgba(205, 204, 204, 0.37);
+}
+
+.buttonAdd {
+    width: 52px;
+    height: 52px;
+    background-image: url(/icons/IconPlus.svg);
+    background-size: cover;
+    background-color: transparent;
+    transition: transform 0.1s ease;
+}
+
+.buttonAdd:active {
+    transform: scale(0.9);
+}
+
+.searchContainer {
+    height: 30px;
+    width: 250px;
+    display: grid;
+    grid-template-columns: 30px 1fr 30px 30px;
+    justify-self: end;
+    gap: 10px;
+    margin-bottom: 21px;
+}
+
+.inputSearch {
+    font-family: "Great Vibes", cursive;
+    border-radius: 85px;
+    border: 1px solid #CBCAD7;
+    padding: 1px 5px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    background: rgba(205, 204, 204, 0.37);
+}
+
+.buttonSearch {
+    background-image: url(/icons/search.svg);
+    background-size: cover;
+    background-color: transparent;
+    transition: transform 0.1s ease;
+}
+
+.buttonSearch:active {
+    transform: scale(0.9);
+}
+
+.buttonSort {
+    width: 30px;
+    background-image: url(/icons/sort-alpha-up.svg);
+    background-size: cover;
+    background-color: transparent;
+    transition: transform 0.1s ease;
+}
+
+.buttonSort:active {
+    transform: scale(0.9);
+}
+
+.buttonCancel {
+    width: 30px;
+    background-image: url(/icons/window-close.svg);
+    background-size: cover;
+    background-color: transparent;
+    margin-top: 5px;
+    transition: transform 0.1s ease;
+}
+
+.buttonCancel:active {
+    transform: scale(0.9);
+}
+
+.containerList {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    height: 56px;
+    border-radius: 85px;
+    border: 1px solid #CBCAD7;
+    padding: 5px 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    background: rgba(205, 204, 204, 0.37);
+    margin-bottom: 15px;
+}
+
+.containerListActive {
+    display: grid;
+    grid-template-columns: 30px 1fr 30px 30px;
+    gap: 15px;
+    border-radius: 85px;
+    border: 1px solid #CBCAD7;
+    padding: 5px 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    background: rgba(205, 204, 204, 0.37);
+    margin-bottom: 15px;
+}
+
+.textList {
+    font-family: "Great Vibes", cursive;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    padding: 5px 15px;
+    max-width: 660px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.textListActive {
+    font-family: "Great Vibes", cursive;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    padding: 5px 15px;
+    max-width: 660px;
+    text-align: center;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    word-wrap: break-word;
+}
+
+.buttonUpdate {
+    width: 30px;
+    height: 30px;
+    background-image: url(/icons/pencil-alt.svg);
+    background-size: cover;
+    background-color: transparent;
+    transition: transform 0.1s ease;
+    margin-top: 9px;
+}
+
+.buttonUpdate:active {
+    transform: scale(0.9);
+}
+
+.buttonSave {
+    width: 30px;
+    height: 30px;
+    background-image: url(/icons/save.svg);
+    background-size: cover;
+    background-color: transparent;
+    transition: transform 0.1s ease;
+    margin-top: 9px;
+}
+
+.buttonDelete {
+    width: 35px;
+    height: 35px;
+    background-image: url(/icons/Trash.svg);
+    background-size: cover;
+    background-color: transparent;
+    transition: transform 0.1s ease;
+    margin-top: 4px;
+}
+
+.buttonDelete:active {
+    transform: scale(0.9);
+}
+
+.buttonBack {
+    width: 30px;
+    height: 30px;
+    background-image: url(/icons/reply.svg);
+    background-size: cover;
+    background-color: transparent;
+    transition: transform 0.1s ease;
+    margin-top: 10px;
+}
+
+.buttonBack:active {
+    transform: scale(0.9);
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+}
+.link:hover {
+  opacity: 0.8;
+}
