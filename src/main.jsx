@@ -5,14 +5,16 @@ import Placeholder from './ToDoList/Placeholder.jsx';
 import Server from './ToDoList/Server.jsx';
 import Fairbase from './ToDoList/Fairbase.jsx'
 import Router from './ToDoList/Task2-Router/Router.jsx'
+import ContextAPI from './ToDoList/ContextAPI/ContextAPI.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     {/* <Placeholder /> */}
     {/* <Server /> */}
     {/* <Fairbase /> */}
-    <BrowserRouter>
+    {/* <BrowserRouter>
       <Router />
-    </BrowserRouter>
+    </BrowserRouter> */}
+    <ContextAPI />
   </StrictMode>,
 )

@@ -48,42 +48,42 @@ import { useRequestDelete, useRequestUpdate } from "../Hooks";
   if (loading) return <p>Загрузка...</p>;
   if (error || !task) return <p>Задача не найдена</p>;
 
-  return (
-        <div className={styles.containerListActive}>
-          {id === currentEditingId ? (
-            <>
-              <button className={styles.buttonBack} onClick={() => navigate('/')}></button>
-              <input
-                className={styles.textListActive}
-                type="text"
-                value={editedText}
-                onChange={(e) => setEditedText(e.target.value)}
-                disabled={isUpdating}
-              />
-              <button
-                className={styles.buttonSave}
-                onClick={() => {requestUpdate(id), navigate('/')}}
-                disabled={isUpdating}
-              />
-            </>
-          ) : (
-            <>
-              <button className={styles.buttonBack} onClick={() => navigate('/')}></button>
-              <div className={styles.textListActive}>{task.title}</div>
-              <button
-                className={styles.buttonUpdate}
-                disabled={loading}
-                onClick={() => setCurrentEditingId(id)}
-              />
-              <button
-                className={styles.buttonDelete}
-                disabled={isDeleting}
-                onClick={() => {requestDelete(id), navigate('/')}}
-              />
-            </>
-            )}
-    </div>
-  );
-};
+    return (
+      <div className={styles.containerListActive}>
+        {id === currentEditingId ? (
+          <>
+            <button className={styles.buttonBack} onClick={() => navigate('/')}></button>
+            <input
+              className={styles.textListActive}
+              type="text"
+              value={editedText}
+              onChange={(e) => setEditedText(e.target.value)}
+              disabled={isUpdating}
+            />
+            <button
+              className={styles.buttonSave}
+              onClick={() => { requestUpdate(id), navigate('/') }}
+              disabled={isUpdating}
+            />
+          </>
+        ) : (
+          <>
+            <button className={styles.buttonBack} onClick={() => navigate('/')}></button>
+            <div className={styles.textListActive}>{task.title}</div>
+            <button
+              className={styles.buttonUpdate}
+              disabled={loading}
+              onClick={() => setCurrentEditingId(id)}
+            />
+            <button
+              className={styles.buttonDelete}
+              disabled={isDeleting}
+              onClick={() => { requestDelete(id), navigate('/') }}
+            />
+          </>
+        )}
+      </div>
+    );
+  };
 
 export default SingleTask;

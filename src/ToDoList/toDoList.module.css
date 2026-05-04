@@ -146,6 +146,19 @@
     margin-bottom: 15px;
 }
 
+.containerListJSON {
+    display: grid;
+    grid-template-columns: 1fr 30px 30px;
+    gap: 15px;
+    height: 56px;
+    border-radius: 85px;
+    border: 1px solid #CBCAD7;
+    padding: 5px 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    background: rgba(205, 204, 204, 0.37);
+    margin-bottom: 15px;
+}
+
 .containerListActive {
     display: grid;
     grid-template-columns: 30px 1fr 30px 30px;
