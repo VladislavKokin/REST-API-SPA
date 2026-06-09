@@ -7,7 +7,7 @@ const Todos = () => {
   const [isToDoList, setIsToDoList] = useState([]);
   const [filteredList, setFilteredList] = useState([]);
   const [refreshProducts, setRefreshProducts] = useState(false);;
-  const [isLoading, setIsLoading] = useState(false);
+  const [, setIsLoading] = useState(false);
   const [isCreating, setIsCreating] = useState(false);
   const [isUpdating, setIsUpdating] = useState(false);
   const [currentEditingId, setCurrentEditingId] = useState(null);
