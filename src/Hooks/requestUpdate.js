@@ -1,10 +1,8 @@
-import { actions } from "../Store/actions";
+import { actions } from "../store/actions";
 
-export const requestUpdate = (todoID) => async (dispatch, getState) => {
+export const requestUpdate = (todoID, editedText) => async (dispatch) => {
   dispatch(actions.setIsUpdating(true));
   try {
-    const { editedText } = getState();
-    // const editedText = getState().todos?.editedText || getState().editedText;
     const response = await fetch(`http://localhost:3000/todos/${todoID}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json;charset=utf-8" },
@@ -14,11 +12,10 @@ export const requestUpdate = (todoID) => async (dispatch, getState) => {
     })
     const data = await response.json();
     console.log("Задача обновлена: ", data);
-    dispatch(actions.updateTodo(todoID, data.title));
+    dispatch({ type: 'UPDATE_TODO_FULFILLED', payload: data })
   }
   finally {
-    dispatch(actions.setIsUpdating(false)), 
-    dispatch(actions.setEditedText("")), 
+    dispatch(actions.setIsUpdating(false));
     dispatch(actions.setCurrentEditingId(null));
   };
 };
